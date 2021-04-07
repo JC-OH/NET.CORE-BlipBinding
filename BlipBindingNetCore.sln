@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blip.Data", "Blip.Data\Blip.Data.csproj", "{FDE540AC-DB13-47C7-87E7-5B4145A8CC85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blip.Domain", "Blip.Domain\Blip.Domain.csproj", "{1B6B0572-946F-4F58-9E2E-D1493B0BE3B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{79B49AB1-647E-4918-A2EE-E256B88B395F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDE540AC-DB13-47C7-87E7-5B4145A8CC85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDE540AC-DB13-47C7-87E7-5B4145A8CC85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDE540AC-DB13-47C7-87E7-5B4145A8CC85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDE540AC-DB13-47C7-87E7-5B4145A8CC85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B6B0572-946F-4F58-9E2E-D1493B0BE3B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B6B0572-946F-4F58-9E2E-D1493B0BE3B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B6B0572-946F-4F58-9E2E-D1493B0BE3B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B6B0572-946F-4F58-9E2E-D1493B0BE3B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79B49AB1-647E-4918-A2EE-E256B88B395F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79B49AB1-647E-4918-A2EE-E256B88B395F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79B49AB1-647E-4918-A2EE-E256B88B395F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79B49AB1-647E-4918-A2EE-E256B88B395F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BBE88F37-768E-465D-A2C3-9A0C7A65D2B3}
+	EndGlobalSection
+EndGlobal

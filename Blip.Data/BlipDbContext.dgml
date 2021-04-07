@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Country" Category="EntityType" Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding Relational:TableName: Countries" BaseClass="" Bounds="350.766317767461,219.998924615526,196.086684061686,136.553600065104" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Country" Name="Country" UseManualLocation="True" />
+    <Node Id="Country.CountryNameEnglish" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 50 TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="370.766262346014,313.275790201823,120.566666666667,23.2766666666666" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="CountryNameEnglish" MaxLength="50" Name="CountryNameEnglish" PropertyAccessMode="PropertyAccessMode.Default" Type="string" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Country.Iso3" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 3 TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="370.766270484034,259.999056803385,50,23.2766666666666" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Iso3" MaxLength="3" Name="Iso3" PropertyAccessMode="PropertyAccessMode.Default" Type="string" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Country.Regions" Category="Navigation Collection" Bounds="450.766455217107,259.999056803385,76.0866666666667,23.2766666666666" Dependent="Region" Field="" Inverse="Country" Label="Regions (*)" Name="Regions" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="IEnumerable&lt;Region&gt;" UseManualLocation="True" />
+    <Node Id="Customer" Category="EntityType" Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding Relational:TableName: Customers" BaseClass="" Bounds="-97.9011695861816,74.7713978944793,317.356735076904,243.107283235677" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Customer" Name="Customer" UseManualLocation="True" />
+    <Node Id="Customer.Country" Category="Navigation Property" Bounds="123.625565490723,114.771525661406,75.83,23.2766666666666" Dependent="" Field="" Inverse="" Label="Country (1)" Name="Country" Principal="Country" PropertyAccessMode="PropertyAccessMode.Default" Type="Country" UseManualLocation="True" />
+    <Node Id="Customer.CountryIso3" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 3 TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="-77.9011692810059,221.325147796823,78.96,23.2766666666667" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="CountryIso3" MaxLength="3" Name="CountryIso3" PropertyAccessMode="PropertyAccessMode.Default" Type="string" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Customer.CustomerID" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.GuidTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="29.8655089823405,168.048381130156,77.8566666666667,23.2766666666667" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="CustomerID" MaxLength="None" Name="CustomerID" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Customer.CustomerName" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 128 TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="-77.9011526997884,274.60191446349,94.4366666666667,23.2766666666666" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="CustomerName" MaxLength="128" Name="CustomerName" PropertyAccessMode="PropertyAccessMode.Default" Type="string" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Customer.Orders" Category="Navigation Collection" Bounds="-77.9011695861816,114.771525661406,70.35,23.2766666666667" Dependent="Order" Field="" Inverse="Customer" Label="Orders (*)" Name="Orders" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="List&lt;Order&gt;" UseManualLocation="True" />
+    <Node Id="Customer.Region" Category="Navigation Property" Bounds="22.4488447062174,114.771497894479,71.1766666666667,23.2766666666667" Dependent="" Field="" Inverse="" Label="Region (1)" Name="Region" Principal="Region" PropertyAccessMode="PropertyAccessMode.Default" Type="Region" UseManualLocation="True" />
+    <Node Id="Customer.RegionCode" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 3 TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="-77.9011060078939,168.048381130156,77.7666666666667,23.2766666666667" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="RegionCode" MaxLength="3" Name="RegionCode" PropertyAccessMode="PropertyAccessMode.Default" Type="string" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Customer.RegionCode1" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="31.0588123703003,221.325147796823,83.77,23.2766666666667" Field="nofield" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="False" IsShadow="True" IsUnicode="True" Label="RegionCode1" MaxLength="None" Name="RegionCode1" PropertyAccessMode="PropertyAccessMode.Default" Type="string" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="IModel" Category="Model" Annotations="Relational:MaxIdentifierLength: 128 SqlServer:ValueGenerationStrategy: IdentityColumn" Bounds="-242.435872318665,626.613512494657,108.44,44" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" Label="BlipDbContext" ProductVersion="3.1.0" PropertyAccessMode="PropertyAccessMode.Default" />
+    <Node Id="Item" Category="EntityType" Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding Relational:TableName: Items" BaseClass="" Bounds="783.695472238542,-173.731942776737,237.253604532877,189.830316297404" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Item" Name="Item" UseManualLocation="True" />
+    <Node Id="Item.Description" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 128 TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="803.695442707133,-80.4551230355025,74.0933333333334,23.2766666666667" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Description" MaxLength="128" Name="Description" PropertyAccessMode="PropertyAccessMode.Default" Type="string" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Item.ItemID" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.GuidTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="883.696067707133,-133.731825916362,54.3733333333333,23.2766666666667" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="ItemID" MaxLength="None" Name="ItemID" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Item.MSRP" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDecimalTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="803.695692137472,-133.731886951518,50,23.2766666666667" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="MSRP" MaxLength="None" Name="MSRP" PropertyAccessMode="PropertyAccessMode.Default" Type="decimal" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Item.OrderItems" Category="Navigation Collection" Bounds="907.789245604269,-80.4550620003462,93.16,23.2766666666667" Dependent="OrderItem" Field="" Inverse="Item" Label="OrderItems (*)" Name="OrderItems" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="List&lt;OrderItem&gt;" UseManualLocation="True" />
+    <Node Id="Item.ReorderQuantity" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="803.696129962993,-27.1784192009688,99.5633333333334,23.2766666666667" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="ReorderQuantity" MaxLength="None" Name="ReorderQuantity" PropertyAccessMode="PropertyAccessMode.Default" Type="int" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Order" Category="EntityType" Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding Relational:TableName: Orders" BaseClass="" Bounds="-61.3068536732646,-173.008978574407,247.313335545858,189.830415369161" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Order" Name="Order" UseManualLocation="True" />
+    <Node Id="Order.Customer" Category="Navigation Property" Bounds="-41.3067895609192,-26.4554280236294,84.1533333333333,23.2766666666667" Dependent="" Field="" Inverse="Orders" Label="Customer (1)" Name="Customer" Principal="Customer" PropertyAccessMode="PropertyAccessMode.Default" Type="Customer" UseManualLocation="True" />
+    <Node Id="Order.CustomerID" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.GuidTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="62.7864576365498,-79.732210059457,77.8566666666667,23.2766666666667" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="CustomerID" MaxLength="None" Name="CustomerID" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Order.Description" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 128 TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="-41.3068341165833,-79.7321337655117,74.0933333333333,23.2766666666667" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Description" MaxLength="128" Name="Description" PropertyAccessMode="PropertyAccessMode.Default" Type="string" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Order.OrderDate" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDateTimeTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="47.8364433187194,-133.008859534555,70.2833333333333,23.2766666666667" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="OrderDate" MaxLength="None" Name="OrderDate" PropertyAccessMode="PropertyAccessMode.Default" Type="DateTime" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Order.OrderID" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.GuidTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="-41.3068173319153,-133.008859534555,59.1433333333333,23.2766666666667" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="OrderID" MaxLength="None" Name="OrderID" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Order.OrderItems" Category="Navigation Collection" Bounds="72.8464818725931,-26.4555043175747,93.16,23.2766666666667" Dependent="OrderItem" Field="" Inverse="Order" Label="OrderItems (*)" Name="OrderItems" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="List&lt;OrderItem&gt;" UseManualLocation="True" />
+    <Node Id="OrderItem" Category="EntityType" Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding Relational:TableName: OrderItems" BaseClass="" Bounds="343.591450861668,-176.556656191565,263.516690165202,189.830481946408" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="OrderItem" Name="OrderItem" UseManualLocation="True" />
+    <Node Id="OrderItem.Item" Category="Navigation Property" Bounds="363.591457575536,-83.2797922755499,60.67,23.2766666666667" Dependent="" Field="" Inverse="OrderItems" Label="Item (1)" Name="Item" Principal="Item" PropertyAccessMode="PropertyAccessMode.Default" Type="Item" UseManualLocation="True" />
+    <Node Id="OrderItem.ItemID" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.GuidTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="443.591414444025,-136.556556191566,54.3733333333333,23.2766666666667" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="ItemID" MaxLength="None" Name="ItemID" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="OrderItem.Order" Category="Navigation Property" Bounds="363.59148259995,-30.0031113291998,65.44,23.2766666666667" Dependent="" Field="" Inverse="OrderItems" Label="Order (1)" Name="Order" Principal="Order" PropertyAccessMode="PropertyAccessMode.Default" Type="Order" UseManualLocation="True" />
+    <Node Id="OrderItem.OrderID" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.GuidTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="527.964699966486,-136.556464638831,59.1433333333333,23.2766666666667" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="OrderID" MaxLength="None" Name="OrderID" PropertyAccessMode="PropertyAccessMode.Default" Type="Guid" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="OrderItem.Price" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerDecimalTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="363.591450861668,-136.556464638831,50,23.2766666666667" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Price" MaxLength="None" Name="Price" PropertyAccessMode="PropertyAccessMode.Default" Type="decimal" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="OrderItem.Quantity" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerShortTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="454.261433568374,-83.2797922755499,61.1766666666666,23.2766666666667" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Quantity" MaxLength="None" Name="Quantity" PropertyAccessMode="PropertyAccessMode.Default" Type="short" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Region" Category="EntityType" Annotations="" BaseClass="" Bounds="-52.3824199541508,397.990836595782,226.72666885376,189.830394498698" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Region" Name="Region" UseManualLocation="True" />
+    <Node Id="Region.Country" Category="Navigation Property" Bounds="47.6175970813759,437.990974260076,75.83,23.2766666666666" Dependent="" Field="" Inverse="Regions" Label="Country (1)" Name="Country" Principal="Country" PropertyAccessMode="PropertyAccessMode.Default" Type="Country" UseManualLocation="True" />
+    <Node Id="Region.CountryIso3" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="75.3842258808144,491.267738176092,78.96,23.2766666666667" Field="nofield" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="False" IsShadow="True" IsUnicode="True" Label="CountryIso3" MaxLength="None" Name="CountryIso3" PropertyAccessMode="PropertyAccessMode.Default" Type="string" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Region.Iso3" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 3 TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="-32.3824248149864,437.990974260076,50,23.2766666666666" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Iso3" MaxLength="3" Name="Iso3" PropertyAccessMode="PropertyAccessMode.Default" Type="string" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Region.RegionCode" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 3 TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="-32.3823887025189,491.267738176092,77.7666666666667,23.2766666666667" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="RegionCode" MaxLength="3" Name="RegionCode" PropertyAccessMode="PropertyAccessMode.Default" Type="string" UseManualLocation="True" ValueGenerated="None" />
+    <Node Id="Region.RegionNameEnglish" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerStringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="-32.3824474234255,544.544593644842,115.913333333333,23.2766666666666" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="RegionNameEnglish" MaxLength="None" Name="RegionNameEnglish" PropertyAccessMode="PropertyAccessMode.Default" Type="string" UseManualLocation="True" ValueGenerated="None" />
+  </Nodes>
+  <Links>
+    <Link Source="Country" Target="Country.CountryNameEnglish" Category="Contains" />
+    <Link Source="Country" Target="Country.Iso3" Category="Contains" />
+    <Link Source="Country" Target="Country.Regions" Category="Contains" />
+    <Link Source="Customer" Target="Country" Category="Foreign Key" Annotations="" Bounds="219.455565490723,233.926493117439,122.553274011118,29.0410174894701" From="Customer.CountryIso3" IsUnique="False" Label="1:*" LabelBounds="273.245031110731,231.168842711285,15.8966666666668,13.2766666666666" Name="Customer -&gt; Country" To="Country.Iso3" />
+    <Link Source="Customer" Target="Customer.Country" Category="Contains" />
+    <Link Source="Customer" Target="Customer.CountryIso3" Category="Contains" />
+    <Link Source="Customer" Target="Customer.CustomerID" Category="Contains" />
+    <Link Source="Customer" Target="Customer.CustomerName" Category="Contains" />
+    <Link Source="Customer" Target="Customer.Orders" Category="Contains" />
+    <Link Source="Customer" Target="Customer.Region" Category="Contains" />
+    <Link Source="Customer" Target="Customer.RegionCode" Category="Contains" />
+    <Link Source="Customer" Target="Customer.RegionCode1" Category="Contains" />
+    <Link Source="Customer" Target="Region" Category="Foreign Key" Annotations="" Bounds="60.8606911139788,317.878681130156,0.0488457506822755,71.1121575887639" From="Customer.RegionCode1" IsUnique="False" Label="1:*" LabelBounds="64.8851139893201,346.795052825008,15.8966666666666,13.2766666666666" Name="Customer -&gt; Region" To="Region.RegionCode" />
+    <Link Source="Item" Target="Item.Description" Category="Contains" />
+    <Link Source="Item" Target="Item.ItemID" Category="Contains" />
+    <Link Source="Item" Target="Item.MSRP" Category="Contains" />
+    <Link Source="Item" Target="Item.OrderItems" Category="Contains" />
+    <Link Source="Item" Target="Item.ReorderQuantity" Category="Contains" />
+    <Link Source="Order" Target="Customer" Category="Foreign Key" Annotations="" Bounds="61.5253628911285,16.8214367947543,0.280519150746976,48.9501088810388" From="Order.CustomerID" IsUnique="False" Label="1:*" LabelBounds="65.6656224670412,34.6696191448669,15.8966666666668,13.2766666666666" Name="Order -&gt; Customer" To="Customer.CustomerID" />
+    <Link Source="Order" Target="Order.Customer" Category="Contains" />
+    <Link Source="Order" Target="Order.CustomerID" Category="Contains" />
+    <Link Source="Order" Target="Order.Description" Category="Contains" />
+    <Link Source="Order" Target="Order.OrderDate" Category="Contains" />
+    <Link Source="Order" Target="Order.OrderID" Category="Contains" />
+    <Link Source="Order" Target="Order.OrderItems" Category="Contains" />
+    <Link Source="OrderItem" Target="Item" Category="Foreign Key" Annotations="" Bounds="607.10814102687,-80.7697696891097,167.587528146174,1.10867299961471" From="OrderItem.ItemID" IsUnique="False" Label="1:*" LabelBounds="682.966802449746,-97.4920998569265,15.8966666666665,13.2766666666666" Name="OrderItem -&gt; Item" To="Item.ItemID" />
+    <Link Source="OrderItem" Target="Order" Category="Foreign Key" Annotations="" Bounds="195.006149849294,-80.5096191742509,148.585301012375,1.27633855596301" From="OrderItem.OrderID" IsUnique="False" Label="1:*" LabelBounds="261.367646264795,-75.8714498935474,15.8966666666668,13.2766666666666" Name="OrderItem -&gt; Order" To="Order.OrderID" />
+    <Link Source="OrderItem" Target="OrderItem.Item" Category="Contains" />
+    <Link Source="OrderItem" Target="OrderItem.ItemID" Category="Contains" />
+    <Link Source="OrderItem" Target="OrderItem.Order" Category="Contains" />
+    <Link Source="OrderItem" Target="OrderItem.OrderID" Category="Contains" />
+    <Link Source="OrderItem" Target="OrderItem.Price" Category="Contains" />
+    <Link Source="OrderItem" Target="OrderItem.Quantity" Category="Contains" />
+    <Link Source="Region" Target="Country" Category="Foreign Key" Annotations="" Bounds="174.344248899609,344.206302101963,168.462122508085,88.885768866571" From="Region.CountryIso3" IsUnique="False" Label="1:*" LabelBounds="241.745329890642,373.603642899744,15.8966666666665,13.2766666666666" Name="Region -&gt; Country" To="Country.Iso3" />
+    <Link Source="Region" Target="Region.Country" Category="Contains" />
+    <Link Source="Region" Target="Region.CountryIso3" Category="Contains" />
+    <Link Source="Region" Target="Region.Iso3" Category="Contains" />
+    <Link Source="Region" Target="Region.RegionCode" Category="Contains" />
+    <Link Source="Region" Target="Region.RegionNameEnglish" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
+    <Category Id="EntityType" />
+    <Category Id="Foreign Key" />
+    <Category Id="Model" />
+    <Category Id="Navigation Collection" />
+    <Category Id="Navigation Property" />
+    <Category Id="Property Foreign" />
+    <Category Id="Property Optional" />
+    <Category Id="Property Primary" />
+    <Category Id="Property Required" />
+  </Categories>
+  <Properties>
+    <Property Id="AfterSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="Annotations" Description="Annotations" Group="Model Properties" DataType="System.String" />
+    <Property Id="BaseClass" Description="Base class" Group="Model Properties" DataType="System.String" />
+    <Property Id="BeforeSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="ChangeTrackingStrategy" Description="Change tracking strategy" Group="Model Properties" DataType="System.String" />
+    <Property Id="Dependent" Description="Dependent entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="Field" Description="Backing field" Group="Model Properties" DataType="System.String" />
+    <Property Id="From" Description="Target property" Group="Model Properties" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="Inverse" Description="Inverse entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsAbstract" Label="IsAbstract" Description="IsAbstract" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="IsAlternateKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsConcurrencyToken" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsForeignKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsPrimaryKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsRequired" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsShadow" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnicode" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnique" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="LabelBounds" DataType="System.Windows.Rect" />
+    <Property Id="MaxLength" DataType="System.String" />
+    <Property Id="Name" Group="Model Properties" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="Principal" Description="Principal entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="ProductVersion" Label="Product Version" Description="EF Core product version" Group="Model Properties" DataType="System.String" />
+    <Property Id="PropertyAccessMode" Group="Property Flags" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="To" Description="Source property" Group="Model Properties" DataType="System.String" />
+    <Property Id="Type" Description="CLR data type" Group="Model Properties" DataType="System.String" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueGenerated" Group="Property Flags" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="EntityType" ValueLabel="True">
+      <Condition Expression="HasCategory('EntityType')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Required" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Required')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Property" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Property')" />
+      <Setter Property="Background" Value="#FF990000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Collection" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Collection')" />
+      <Setter Property="Background" Value="#FFFF3232" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Model" ValueLabel="True">
+      <Condition Expression="HasCategory('Model')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>
